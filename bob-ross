@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Widget</title>
+
+    <style>
+
+		.main {
+			background: linear-gradient(#8070FB, #DD3EDE);
+			display: inline-flex;
+			
+		}
+		
+		.bob-img {
+			border-radius: 50px;
+		}
+		
+        .widget {
+            padding: 10px 10px ;
+            color: white;
+            text-align: center;
+            max-width: auto;
+			font-family: Futura PT; 
+            font-size: 1.2em;
+        }
+
+        div {
+            width: auto;
+            min-height: 100px;
+			margin-top: auto;
+			padding: 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+<div class="main">
+
+	<div class="bob-img"><img src="https://yt3.ggpht.com/ytc/AMLnZu9RESdDlSdL-cGJ5ctBufovSAWF-9DyaCoA_b89FA=s900-c-k-c0x00ffffff-no-rj" style="height: inherit; max-height: 120px; border-radius: 150px; "></div>
+    <div class="widget" id="widget">
+		
+	</div>
+</div>
+
+<script>
+
+quotes=[
+"We don´t make mistakes, just happy little accidents.<br><b>Bob Ross</b>",
+"Talent is a pursued interest. Anything that you're willing to practice, you can do.<br><b>Bob Ross</b>",
+"There's nothing wrong with having a tree as a friend.<br><b>Bob Ross</b>",
+"I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people.<br><b>Bob Ross</b>",
+"I can't think of anything more rewarding than being able to express yourself to others through painting. Exercising the imagination, experimenting with talents, being creative; these things, to me, are truly the windows to your soul.<br><b>Bob Ross</b>",
+"The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe.<br><b>Bob Ross</b>",
+"This is your world, you’re the creator. Find freedom on this canvas. Believe, that you can do it, ‘Cuz you can do it. You can do it.<br><b>Bob Ross</b>"
+	
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
