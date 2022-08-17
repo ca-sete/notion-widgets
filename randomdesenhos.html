@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <title>random drawing</title>
+  <style>
+    
+	  h2 {
+	font-family: Futura PT;
+	font-weight: 600;
+	  }
+    
+    #output {
+    
+    font-family: Futura PT;
+	font-size: 20px;
+	color: black;
+    }
+	  
+	  button {
+	font-family: Futura PT;
+	font-size: 20px;
+	padding: 10px 100px;
+	border: none;
+	color: white;
+	background-color: #F1B1F1;
+	border-radius: 10px;
+	  }
+	  
+  </style>
+</head>
+<body>
+
+  <h2>o que vou desenhar hoje?</h2>
+  <div>
+    <button>GERAR</button>
+  </div>
+   
+  
+
+  <div id="output"></div>
+
+  <script>
+   
+    var btn = document.querySelector("button");
+    var out = document.getElementById("output");
+    
+  
+    btn.addEventListener("click", getWord);
+   
+    function getWord(){
+     
+      
+      var theWord= [
+		  'um close da sua gata preferida',
+		  'um chapéu chique',
+		  'sua comida favorita',
+		  'uma coisa comum do seu dia vista de um ângulo interessante',
+		  'uma bicicleta radical',
+		  'um par de óculos',
+		  'uma planta',
+		  'uma xícara e um pires',
+		  'olhos',
+		  'algo que é feito à mão',
+		  'uma cadeira',
+		  'um estojo de lápis aberto',
+		  'uma colher',
+		  'um troféu',
+		  'uma torneira',
+		  'uma pilha de panelas e frigideiras',
+		  'pés.',
+		  'sua mão.',
+		  'as roupas que você deixou cair no chão do banheiro',
+		  'uma concha',
+		  'uma pilha de livros',
+		  'umas havaianas velhas',
+		  'um copo de água',
+		  'letras',
+		  'peças de jogos',
+		  'uma releitura da pintura de um pintor famoso',
+		  'um par de óculos',
+
+      ];
+
+      
+      var wordNum = Math.floor(Math.random() * theWord.length);
+      
+     
+      output.textContent = theWord[wordNum];
+    }
+</script>
+</body>
+</html>
