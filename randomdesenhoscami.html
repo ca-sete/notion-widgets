@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <title>random drawing camilinha</title>
+  <style>
+    
+	  h2 {
+		font-family: Futura PT;
+		font-weight: 600;
+		text-align: center;
+	  }
+    
+    #output {
+    font-family: Futura PT;
+		font-size: 20px;
+		text-align: center;
+		color: black;
+		margin: 10px auto;
+    }
+	  
+	  button {
+		font-family: Futura PT;
+		font-size: 20px;
+		width: 100%;
+		border: none;
+		color: white;
+		background-color: #F1B1F1;
+		border-radius: 10px;
+	  }
+	 
+	  .main {
+		width: 100%;
+	  }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h2>o que vou desenhar hoje?</h2>
+  <div>
+    <button>GERAR</button>
+  </div>
+   
+  
+
+  <div id="output"></div>
+</div>
+	
+  <script>
+   
+    var btn = document.querySelector("button");
+    var out = document.getElementById("output");
+    
+  
+    btn.addEventListener("click", getWord);
+   
+    function getWord(){
+     
+      
+      var theWord= [
+'linhas dentro de formas',
+'seus medos',
+'suas três últimas refeições',
+'paisagem bonita',
+'seu lugar favorito',
+'suas férias dos sonhos',
+'seu animal favorito com letras',
+'uma tirinha engraçada',
+'uma tirinha com 4 gatinhas',
+'flores e ossos',
+'uma flor de maconha',
+'uma fada',
+'cisne negro',
+'um beijo',
+'uma paisagem de outro planeta]',
+'um oásis no deserto',
+'um predador',
+'um circo intenerante',
+'gnomo de jardim',
+'a barraca de um feirante',
+'uma odalisca',
+'um forró gostoso',
+'performance de catira',
+'o feminismo',
+'Itália',
+'o sol',
+'árvores',
+'seu cantor favorito',
+'uma cena histórica',
+'frango assado',
+'uma fazenda',
+'o subterrâneo',
+'sua alma',
+'seu cérebro',
+'seus desejos',
+'estátuas gregas',
+'hogwarts',
+'uma guerra  ',
+'um escritório',
+'um sonho',
+'Coréia',
+'Japão',
+'um gato medieval',
+'uma rainha',
+'Holanda',
+'Faroeste',
+'Lettering',
+'sua mão',
+'maquiagem',
+'apocalypse zumbi',
+'roupas da moda',
+'uma gargantilha',
+'vampiros',
+'o romance perfeito',
+'Rio de Janeiro',
+'Religião',
+'Cobra',
+'Quadrilha',
+'Natal',
+'Presente',
+'Aniversário',
+'Verão',
+'Inverno',
+'Primavera',
+'Outono',
+'Peixes',
+'Moluscos',
+'Artrópodes',
+'Invertebrados',
+'Exoesqueleto',
+'Coníferas',
+'Metrópole',
+'Trânsito',
+'Inclusão',
+'suas alegrias',
+'sua aposentadoria',
+'seu casamento',
+'seu carro dos sonhos',
+'uma parada na estrada',
+'o céu',
+'o pôr do sol',
+'aves de rapina',
+'seu  jogo favorito',
+'sua música favorita',
+'uma praia paradisíaca',
+'crustáceos',
+'hotel',
+'sorriso',
+'fit dance',
+'família',
+
+
+      ];
+
+      
+      var wordNum = Math.floor(Math.random() * theWord.length);
+      
+     
+      output.textContent = theWord[wordNum];
+    }
+
+</script>
+</body>
+</html>
