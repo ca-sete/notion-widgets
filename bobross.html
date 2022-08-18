@@ -64,11 +64,11 @@ quotes=[
 	
 ];
 
-const INTERVAL = 28800000;
+const INTERVAL = 720000;
 
 function dispalyQuote(){
 
-    document.getElementById('widget').innerHTML =quotes[0];
+    document.getElementById('widget').innerHTML =quotes[7];
     quotes.forEach((quote, i) => {
         setTimeout(() => {
             document.getElementById('widget').innerHTML =quote;
